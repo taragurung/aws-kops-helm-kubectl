@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+variables:
+  K8S_AWS_KEY: "${K8S_AWS_KEY}"
+  K8S_AWS_SECRET: "${K8S_AWS_SECRET}"
+  K8S_AWS_REGION: "${K8S_AWS_REGION}"
+
+deploy:
+  stage: deploy
+  image: dwdraju/eks-kubectl-helm
+  script:
+    - start writing kops commands
